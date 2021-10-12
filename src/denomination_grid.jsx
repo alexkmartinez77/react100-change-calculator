@@ -4,8 +4,8 @@ export class Denomination_Grid extends React.Component{
 
   render(){
     return (
-      <div>
-        
+      <div className="container rounded bg-light">
+        Denomination Grid
       </div>
     )
   }
