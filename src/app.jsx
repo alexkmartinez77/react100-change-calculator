@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import Header from './header';
+import Tagline from './tagline';
+import Bootstrap_Panel from './bootstrap_panel';
+import Outcome_Alerts from './outcome_alerts';
+import Denomination_Grid from './denomination_grid';
+
 
 class App extends Component {
   constructor(props) {
@@ -6,19 +12,21 @@ class App extends Component {
   }
 
   render() {
-    <div>
+    return (
+    <div className="container mt-3">
       <Header />
       <Tagline />
-      <div class="row">
-        <div class="col-4">
+      <div className="row">
+        <div className="col-4">
           <Bootstrap_Panel />
         </div>
-        <div class="col-8">
+        <div className="col-8">
           <Outcome_Alerts />
           <Denomination_Grid />
         </div>
       </div>
     </div>
+    )
   }
 }
 
