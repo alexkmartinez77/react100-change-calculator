@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export class Bootstrap_Panel extends React.Component{
 
@@ -36,7 +36,7 @@ export class Bootstrap_Panel extends React.Component{
          </div>
          <div className="row  text center">
             <div className="col m-2">
-              <button className="btn-primary">Calculate</button>
+              <button className="btn-primary" onClick={() => this.props.handleClick()}>Calculate</button>
             </div>
          </div>
       </div>
