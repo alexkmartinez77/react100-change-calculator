@@ -49,11 +49,15 @@ class App extends Component {
       <Tagline />
       <div className="row">
         <div className="col-4">
-          <Bootstrap_Panel due={this.state.due} received={this.state.received} handleInput={this.handleInput} handleClick={() => this.handleClick(this.state)}/>
+          <div className="container rounded bg-light">
+            <Bootstrap_Panel due={this.state.due} received={this.state.received} handleInput={this.handleInput} handleClick={() => this.handleClick(this.state)} />
+          </div>
         </div>
         <div className="col-8">
-          <Outcome_Alerts />
-          <Denomination_Grid />
+          <div className="container rounded bg-light">
+            <Outcome_Alerts due={this.state.due} received={this.state.received} />
+            <Denomination_Grid />
+          </div>
         </div>
       </div>
     </div>

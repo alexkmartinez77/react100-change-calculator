@@ -4,7 +4,7 @@ export class Bootstrap_Panel extends React.Component{
 
   render(){
     return (
-      <div className="container rounded bg-light">
+      <div>
          <div className="row">
             <div className="col m-2">
               Enter Information
