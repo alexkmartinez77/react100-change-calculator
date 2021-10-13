@@ -16,7 +16,6 @@ class App extends Component {
         { currency: "twenties", label: "$20",value: 20, quantity: 0, show: false },
         { currency: "tens", label: "$10",value: 10, quantity: 0, show: false },
         { currency: "fives", label: "$5",value: 5, quantity: 0, show: false },
-        { currency: "twos", label: "$2",value: 2, quantity: 0, show: false },
         { currency: "ones", label: "$1",value: 1, quantity: 0, show: false },
         { currency: "quarters", label: ".25 &#162;",value: 0.25, quantity: 0, show: false },
         { currency: "dimes", label: ".10 &#162;",value: 0.1, quantity: 0, show: false },
@@ -39,7 +38,6 @@ class App extends Component {
     let deepCopyObj = JSON.parse(JSON.stringify(stateObject));
     calculateChange(deepCopyObj);
     this.setState(deepCopyObj);
-
   }
 
   render() {
@@ -56,7 +54,7 @@ class App extends Component {
         <div className="col-8">
           <div className="container rounded bg-light">
             <Outcome_Alerts due={this.state.due} received={this.state.received} />
-            <Denomination_Grid />
+            <Denomination_Grid changeArray={this.state.changeObjects}/>
           </div>
         </div>
       </div>
