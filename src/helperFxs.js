@@ -1,7 +1,7 @@
 //Called on by calculate button to calculate each monetary change value and display it
 const calculateChange = (obj) => {
 
-  let {due, received, changeObjects, show} = obj;
+  let {due, received, changeObjects} = obj;
   var remainingChange = received - due;
   
   return changeObjects.map(currency => {
@@ -11,4 +11,5 @@ const calculateChange = (obj) => {
   });
 
 }
-  export default calculateChange;
+
+export default calculateChange;

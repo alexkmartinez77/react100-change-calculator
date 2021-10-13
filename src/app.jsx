@@ -42,7 +42,7 @@ class App extends Component {
 
   render() {
     return (
-    <div className="container mt-3">
+    <div className="container center orange lighten-5 z-depth-2">
       <Header />
       <Tagline />
       <div className="row">

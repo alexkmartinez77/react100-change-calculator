@@ -1,16 +1,16 @@
-import React from 'react'
+import React from 'react';
 
 export class Outcome_Alerts extends React.Component{
 
   render(){
     let paid = this.props.received;
     let due = this.props.due;
-    let change = paid - due;
+    let change = (paid - due).toFixed(2);
     let alert; 
 
     switch (true) {
       case  paid < due:
-            alert = <div> You are ${(due - paid)} short.</div>;
+            alert = <div> You are ${(due - paid).toFixed(2)} short.</div>;
             break;
       case  change > 0:
             alert = <div> The total change due is {change}.</div>;
@@ -21,9 +21,9 @@ export class Outcome_Alerts extends React.Component{
   }
 
     return (
-      <div className="container rounded bg-success">
+      <div className="container rounded">
         <div className="row">
-          <div className="col">
+          <div className="center-align">
             {alert}
           </div>
         </div>
@@ -31,5 +31,6 @@ export class Outcome_Alerts extends React.Component{
     )
   }
 }
+
 export default Outcome_Alerts;
 
