@@ -6,7 +6,7 @@ export class Header extends React.Component{
     return (
       <div className="row rowModifier1">
         <div className="col s12">
-          <h1 className="sarpanchFont headerMargin">Change Calculator <sup>v2.0</sup></h1>
+          <h1 className="sarpanchFont headerMargin">Change Calculator</h1>
         </div>
       </div>
     )
