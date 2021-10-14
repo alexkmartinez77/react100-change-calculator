@@ -6,7 +6,7 @@ export class Tagline extends React.Component{
     return (
       <div className="row">
         <div className="center-align">
-          <span className="bebasFont counterHeaders verticalAlign">v2.0
+          <span className="counterHeaders verticalAlign">v2.0
             <sup>
               <img className="reactLogo verticalAlign" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/440px-React-icon.svg.png"/> Powered by React
             </sup>

@@ -45,11 +45,7 @@ class App extends Component {
     <div className="container center orange lighten-5 z-depth-2">
       <Header />
       <Tagline />
-      <div className="row">
-        <div className="col">
-            <Bootstrap_Panel due={this.state.due} received={this.state.received} handleInput={this.handleInput} handleClick={() => this.handleClick(this.state)} />
-        </div>
-      </div>
+      <Bootstrap_Panel due={this.state.due} received={this.state.received} handleInput={this.handleInput} handleClick={() => this.handleClick(this.state)} />
       <Outcome_Alerts due={this.state.due} received={this.state.received} />
       <Denomination_Grid changeArray={this.state.changeObjects}/>
     </div>
