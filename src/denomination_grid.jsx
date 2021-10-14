@@ -1,4 +1,5 @@
 import React from 'react'
+import Denomination_Row from './denomination_row';
 
 export class Denomination_Grid extends React.Component{
   render(){
@@ -15,36 +16,16 @@ export class Denomination_Grid extends React.Component{
     return (
       <div className="row container">
         <div className="col s6">
-          <div className="row">
-            <table class="centered">
-              <tr>
-                <td><p className="sarpanchFont counters">{twenties.quantity}</p></td>
-                <td><div className=" teal lighten-2 dollarImg"></div></td>
-                <td><p className="bebasFont counters">{twenties.label}</p></td>
-              </tr>
-            </table>
-          </div>
-          <div className="row">
-            <div className="col">
-              <div className="teal lighten-2" style={{width:'150px', height: '64px'}}>{tens.quantity}<i className="material-icons left">paid</i>{tens.label}</div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col">
-              <div className="teal lighten-2" style={{width:'150px', height: '64px'}}>{fives.quantity}<i className="material-icons left">paid</i>{fives.label}</div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col">
-              <div className="teal lighten-2" style={{width:'150px', height: '64px'}}>{ones.quantity}<i className="material-icons left">paid</i>{ones.label}</div>
-            </div>
-          </div>
+          <Denomination_Row label={twenties.label} quantity={twenties.quantity} show={twenties.show}/>
+          <Denomination_Row label={tens.label} quantity={tens.quantity} show={tens.show}/>
+          <Denomination_Row label={fives.label} quantity={fives.quantity} show={fives.show}/>
+          <Denomination_Row label={ones.label} quantity={ones.quantity} show={ones.show}/>
         </div>
         <div className="col s6">
-            <div className="container teal lighten-2" style={{width:'150px', height: '64px'}}>{quarters.quantity}<i className="material-icons left">paid</i>{quarters.label}</div>
-            <div className="container teal lighten-2" style={{width:'150px', height: '64px'}}>{dimes.quantity}<i className="material-icons left">paid</i>{dimes.label}</div>
-            <div className="container teal lighten-2" style={{width:'150px', height: '64px'}}>{nickels.quantity}<i className="material-icons left">paid</i>{nickels.label}</div>
-            <div className="container teal lighten-2" style={{width:'150px', height: '64px'}}>{pennies.quantity}<i className="material-icons left">paid</i>{pennies.label}</div>
+          <Denomination_Row label={quarters.label} quantity={quarters.quantity} show={quarters.show}/>
+          <Denomination_Row label={dimes.label} quantity={dimes.quantity} show={dimes.show}/>
+          <Denomination_Row label={nickels.label} quantity={nickels.quantity} show={nickels.show}/>
+          <Denomination_Row label={pennies.label} quantity={pennies.quantity} show={pennies.show}/>
         </div>
       </div>
     )
