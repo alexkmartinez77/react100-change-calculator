@@ -1,12 +1,16 @@
-import React from 'react'
+import React from 'react';
 
 export class Tagline extends React.Component{
 
-  render(){
+  render() {
     return (
-      <div className="row p-1">
+      <div className="row">
         <div className="center-align">
-          Powered by React
+          <span className="bebasFont counterHeaders verticalAlign">v2.0
+            <sup>
+              <img className="reactLogo verticalAlign" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/440px-React-icon.svg.png"/> Powered by React
+            </sup>
+          </span>
         </div>
       </div>
     )
