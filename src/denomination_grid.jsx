@@ -13,18 +13,38 @@ export class Denomination_Grid extends React.Component{
     let pennies = change[7];
 
     return (
-      <div className="container rounded bg-light">
-        <div className="row">
-            <span className="container rounded bg-info border" style={{width:'100px', height: '100px'}}>{twenties.label} {twenties.quantity}</span>
-            <span className="container rounded bg-info border" style={{width:'100px', height: '100px'}}>{tens.label} {tens.quantity}</span>
-            <span className="container rounded bg-info border" style={{width:'100px', height: '100px'}}>{fives.label} {fives.quantity}</span>
-            <span className="container rounded bg-info border" style={{width:'100px', height: '100px'}}>{ones.label} {ones.quantity}</span>
+      <div className="row container">
+        <div className="col s6">
+          <div className="row">
+            <table class="centered">
+              <tr>
+                <td><p className="sarpanchFont counters">{twenties.quantity}</p></td>
+                <td><div className=" teal lighten-2 dollarImg"></div></td>
+                <td><p className="bebasFont counters">{twenties.label}</p></td>
+              </tr>
+            </table>
+          </div>
+          <div className="row">
+            <div className="col">
+              <div className="teal lighten-2" style={{width:'150px', height: '64px'}}>{tens.quantity}<i className="material-icons left">paid</i>{tens.label}</div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col">
+              <div className="teal lighten-2" style={{width:'150px', height: '64px'}}>{fives.quantity}<i className="material-icons left">paid</i>{fives.label}</div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col">
+              <div className="teal lighten-2" style={{width:'150px', height: '64px'}}>{ones.quantity}<i className="material-icons left">paid</i>{ones.label}</div>
+            </div>
+          </div>
         </div>
-        <div className="row">
-            <span className="container rounded bg-info border" style={{width:'100px', height: '100px'}}>{quarters.label} {quarters.quantity}</span>
-            <span className="container rounded bg-info border" style={{width:'100px', height: '100px'}}>{dimes.label} {dimes.quantity}</span>
-            <span className="container rounded bg-info border" style={{width:'100px', height: '100px'}}>{nickels.label} {nickels.quantity}</span>
-            <span className="container rounded bg-info border" style={{width:'100px', height: '100px'}}>{pennies.label} {pennies.quantity}</span>
+        <div className="col s6">
+            <div className="container teal lighten-2" style={{width:'150px', height: '64px'}}>{quarters.quantity}<i className="material-icons left">paid</i>{quarters.label}</div>
+            <div className="container teal lighten-2" style={{width:'150px', height: '64px'}}>{dimes.quantity}<i className="material-icons left">paid</i>{dimes.label}</div>
+            <div className="container teal lighten-2" style={{width:'150px', height: '64px'}}>{nickels.quantity}<i className="material-icons left">paid</i>{nickels.label}</div>
+            <div className="container teal lighten-2" style={{width:'150px', height: '64px'}}>{pennies.quantity}<i className="material-icons left">paid</i>{pennies.label}</div>
         </div>
       </div>
     )

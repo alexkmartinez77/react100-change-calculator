@@ -3,47 +3,8 @@ import React from 'react';
 export class Bootstrap_Panel extends React.Component{
 
   render(){
-    return (
-      
-      <div>{/*
-         <div className="row">
-            <div className="col m-2">
-              Enter Information
-            </div>
-         </div>
-         <div className="row bg-white">
-            <div className="col">
-              <div className="row">
-                <div className="col">
-                  <label className="font-weight-bold">How much is due?</label>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col">
-                  <input className="form-control" name="due" type="number" defaultValue="this.props.due" onChange={(e) => this.props.handleInput(e)}></input>                  
-                </div>
-              </div>
-              <div className="row">
-                <div className="col">
-                <label className="font-weight-bold">How much was received?</label>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col">
-                  <input className="form-control" name="received" type="number" defaultValue="this.props.received" onChange={(e) => this.props.handleInput(e)}></input>
-                </div>
-              </div>
-            </div>
-         </div>
-         <div className="row  text center">
-            <div className="col m-2">
-              <button className="btn-primary" onClick={() => this.props.handleClick()}>Calculate</button>
-            </div>
-         </div> 
-      </div>*/}
-     
+    return (        
       <div className="row rowModifier1">
-      {/*<form className="col s12" onsubmit="submitFunction(); return false;">*/}
         <div className="row rowModifier1 valign-wrapper">
           <div className="col s1 right-align dollarSignPadding">
             <p className="dollarSignMargin bebasFont inputText">$</p>
@@ -67,10 +28,7 @@ export class Bootstrap_Panel extends React.Component{
             <i className="material-icons right">send</i>
           </button>
         </div>    
-{/*</form>*/}
     </div>
-    </div>
-
     )
   }
 }

@@ -3,13 +3,15 @@ const calculateChange = (obj) => {
 
   let {due, received, changeObjects} = obj;
   var remainingChange = received - due;
-  
-  return changeObjects.map(currency => {
-    currency.quantity = Math.floor(remainingChange / currency.value);
-    currency.quantity > 0 ? currency.show = true : currency.show = false;
-    remainingChange = (remainingChange % currency.value).toFixed(2);
-  });
-
+  if (remainingChange < 0) {
+    return
+  } else {
+    return changeObjects.map(currency => {
+      currency.quantity = Math.floor(remainingChange / currency.value);
+      currency.quantity > 0 ? currency.show = true : currency.show = false;
+      remainingChange = (remainingChange % currency.value).toFixed(2);
+    });
+  }
 }
 
 export default calculateChange;
