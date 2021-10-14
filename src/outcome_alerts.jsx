@@ -10,19 +10,19 @@ export class Outcome_Alerts extends React.Component{
 
     switch (true) {
       case  paid < due:
-            alert = <div> You are ${(due - paid).toFixed(2)} short.</div>;
+            alert = <div className="noMargin counterHeaders bebasFont"> You are ${(due - paid).toFixed(2)} short.</div>;
             break;
       case  change > 0:
-            alert = <div> The total change due is {change}.</div>;
+            alert = <div className="noMargin counterHeaders bebasFont"> The total change due is {change}.</div>;
             break;
       default:
-            alert = <div> Enter a valid received and due amounts to calculate your change.</div>;
+            alert = <div className="noMargin counterHeaders bebasFont"> Enter a sale and tendered amount above to calculate your change.</div>;
             break;
   }
 
     return (
-      <div className="container rounded">
-        <div className="row">
+      <div className="row">
+        <div className="col s12">
           <div className="center-align">
             {alert}
           </div>
