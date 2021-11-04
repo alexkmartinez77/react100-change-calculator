@@ -5,7 +5,7 @@ export class Denomination_Row extends React.Component{
 
     let display;
     this.props.show ? display = 'row': display = 'hide'; 
-    let img = `https://raw.githubusercontent.com/alexkmartinez77/web102-change-calculator/main/images/${this.props.currency}.png`
+    let img = `https://raw.githubusercontent.com/alexkmartinez77/web102-change-calculator/main/public/images/${this.props.currency}.png`
     let type = this.props.type;
     
     return (
